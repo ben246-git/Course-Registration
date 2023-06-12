@@ -1,31 +1,21 @@
 # Course-Registration-System
-The program is a registration system at BG University. focused on communication between tasks. The communication between the server and the client(s) will be performed by two protocols: Thread-Per-Client (TPC) and Reactor servers. 
-
+The program is a registration system at BG University. focused on communication between tasks. The communication between the server and the client(s) will be performed by two protocols: 
+1. Thread-Per-Client (TPC)  
+2. Reactor servers. 
 
 Testing run commands:
 
-put Course.txt file on server folder
+For reactor server protocol:
 
-To use reactor server:
+mvn exec:java -Dexec.mainClass=”bgu.spl.net.impl.BGRSServer.ReactorMain” - Dexec.args=”<port> <Num of threads>”
 
-mvn exec:java -Dexec.mainClass=”bgu.spl.net.impl.BGRSServer.ReactorMain” -
+For thread per client server:
 
-Dexec.args=”<port> <Num of threads>”
+mvn exec:java -Dexec.mainClass=”bgu.spl.net.impl.BGRSServer.TPCMain” - Dexec.args=”<port>”
 
-
-To use thread per client server:
-
-mvn exec:java -Dexec.mainClass=”bgu.spl.net.impl.BGRSServer.TPCMain” -
-
-Dexec.args=”<port>”
-
-after than :
-
-(on client folder)
-
-make
-
-BGRSclient <ip> <port> 
+After than :
+  
+make: BGRSclient <ip> <port> 
 
 
 
