@@ -10,7 +10,7 @@ To use reactor server:
 
 mvn exec:java -Dexec.mainClass=”bgu.spl.net.impl.BGRSServer.ReactorMain” -
 
-Dexec.args=”<port> <No of threads>”
+Dexec.args=”<port> <Num of threads>”
 
 
 To use thread per client server:
